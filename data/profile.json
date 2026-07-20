@@ -1,18 +1,18 @@
 {
   "person": {
     "name": "郭景涛",
-    "academicTitle": "学生研究者",
+    "academicTitle": "研究生",
     "institution": "西南民族大学",
     "bio": "关注智能信息处理与数据驱动方法在现实问题中的应用。",
     "facts": [
       { "label": "所属机构", "value": "西南民族大学" },
-      { "label": "研究身份", "value": "学生研究者" },
+      { "label": "研究身份", "value": "研究生" },
       { "label": "所在地区", "value": "中国·成都" }
     ]
   },
   "links": [
     { "label": "发送邮件", "url": "mailto:250854042022@stu.swun.edu.cn", "external": false },
-    { "label": "GitHub", "url": "https://github.com/", "external": true }
+    { "label": "GitHub", "url": "https://github.com/jf-gjt", "external": true }
   ],
   "research": [
     { "title": "智能信息处理", "description": "探索人工智能方法在信息理解、分析与决策任务中的应用。" },
@@ -20,7 +20,7 @@
     { "title": "复杂系统建模", "description": "研究面向实际问题的系统建模、优化与应用实践。" }
   ],
   "education": [
-    { "period": "待更新", "institution": "西南民族大学", "degree": "教育经历待补充", "major": "", "note": "请在 data/profile.json 中补充学位、专业、起止时间及相关经历。" }
+    { "period": "2025-2028", "institution": "西南民族大学", "degree": "研究生", "major": "计算机技术", "note": "无" }
   ],
   "publications": [
     { "year": "待更新", "title": "论文成果待补充", "authors": "郭景涛等", "venue": "请在配置文件中填写期刊、会议或预印本信息。", "category": "论文", "url": "" },
@@ -32,6 +32,6 @@
   "contacts": [
     { "label": "电子邮箱", "value": "250854042022@stu.swun.edu.cn", "url": "mailto:250854042022@stu.swun.edu.cn", "external": false },
     { "label": "所属机构", "value": "西南民族大学", "url": "https://www.swun.edu.cn/", "external": true },
-    { "label": "GitHub", "value": "待补充个人主页链接", "url": "https://github.com/", "external": true }
+    { "label": "GitHub", "value": "待补充个人主页链接", "url": "https://github.com/jf-gjt", "external": true }
   ]
 }
