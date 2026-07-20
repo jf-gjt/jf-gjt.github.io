@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "学术主页个人资料配置",
+  "description": "profile.json 的字段说明。所有页面展示内容均由该文件读取；可依据此 Schema 在支持 JSON Schema 的编辑器中获得字段提示。",
+  "type": "object",
+  "required": ["person", "links", "research", "education", "publications", "projects", "contacts"],
+  "properties": {
+    "person": { "description": "基本个人信息。", "type": "object", "required": ["name", "academicTitle", "institution", "bio", "facts"], "properties": { "name": { "type": "string", "description": "公开显示的姓名。" }, "academicTitle": { "type": "string", "description": "学术头衔或当前身份。" }, "institution": { "type": "string", "description": "所属院校、机构或实验室。" }, "bio": { "type": "string", "description": "一至两句研究简介。" }, "facts": { "$ref": "#/$defs/labeledValues" } } },
+    "links": { "description": "简介区的快捷链接。", "$ref": "#/$defs/quickLinks" },
+    "research": { "description": "研究方向卡片，按数组顺序展示。", "type": "array", "items": { "$ref": "#/$defs/researchItem" } },
+    "education": { "description": "教育经历，按时间倒序填写。", "type": "array", "items": { "$ref": "#/$defs/educationItem" } },
+    "publications": { "description": "论文与其他成果；category 用于前端筛选。", "type": "array", "items": { "$ref": "#/$defs/publicationItem" } },
+    "projects": { "description": "研究项目列表。", "type": "array", "items": { "$ref": "#/$defs/projectItem" } },
+    "contacts": { "description": "联系区条目。", "$ref": "#/$defs/contactLinks" }
+  },
+  "$defs": {
+    "labeledValues": { "type": "array", "items": { "type": "object", "required": ["label", "value"], "properties": { "label": { "type": "string", "description": "字段标签。" }, "value": { "type": "string", "description": "字段显示值。" } } } },
+    "quickLinks": { "type": "array", "items": { "type": "object", "required": ["label", "url", "external"], "properties": { "label": { "type": "string", "description": "链接标签。" }, "url": { "type": "string", "description": "完整 URL 或 mailto: 地址。" }, "external": { "type": "boolean", "description": "外部站点填 true，会在新标签打开。" } } } },
+    "contactLinks": { "type": "array", "items": { "type": "object", "required": ["label", "value", "url", "external"], "properties": { "label": { "type": "string", "description": "链接标签。" }, "value": { "type": "string", "description": "联系区显示值。" }, "url": { "type": "string", "description": "完整 URL 或 mailto: 地址。" }, "external": { "type": "boolean", "description": "外部站点填 true，会在新标签打开。" } } } },
+    "researchItem": { "type": "object", "required": ["title", "description"], "properties": { "title": { "type": "string" }, "description": { "type": "string" } } },
+    "educationItem": { "type": "object", "required": ["period", "institution", "degree"], "properties": { "period": { "type": "string", "description": "如 2023.09 - 至今。" }, "institution": { "type": "string" }, "degree": { "type": "string" }, "major": { "type": "string" }, "note": { "type": "string" } } },
+    "publicationItem": { "type": "object", "required": ["year", "title", "authors", "venue", "category"], "properties": { "year": { "type": "string" }, "title": { "type": "string" }, "authors": { "type": "string" }, "venue": { "type": "string" }, "category": { "type": "string", "description": "筛选类别，如 论文、会议论文、其他成果。" }, "url": { "type": "string", "description": "DOI、出版社或预印本链接；没有时留空字符串。" } } },
+    "projectItem": { "type": "object", "required": ["period", "role", "title", "description"], "properties": { "period": { "type": "string" }, "role": { "type": "string" }, "title": { "type": "string" }, "description": { "type": "string" } } }
+  }
+}
