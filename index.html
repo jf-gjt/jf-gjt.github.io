@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="郭景涛的学术主页，展示研究方向、教育背景与学术成果。">
+    <meta name="theme-color" content="#1f2933">
+    <title>郭景涛 | Academic Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要内容</a>
+    <header class="site-header sticky-top border-bottom">
+      <nav class="navbar navbar-expand-lg container py-2" aria-label="主导航">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top" aria-label="返回页面顶部">
+          <span class="brand-mark" aria-hidden="true">GJ</span>
+          <span data-field="person.name">郭景涛</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="展开导航菜单">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="site-nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#research">研究方向</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">教育背景</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications">学术成果</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">联系方式</a></li>
+            <li class="nav-item ms-lg-2"><button class="btn theme-toggle" id="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式"><span aria-hidden="true">◐</span></button></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero-section" aria-labelledby="profile-name">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-8">
+              <p class="eyebrow">ACADEMIC PROFILE</p>
+              <h1 id="profile-name" data-field="person.name">郭景涛</h1>
+              <p class="lead mb-2" data-field="person.academicTitle">学生研究者</p>
+              <p class="institution" data-field="person.institution">西南民族大学</p>
+              <p class="hero-bio" data-field="person.bio">关注智能信息处理与数据驱动方法在现实问题中的应用。</p>
+              <div class="d-flex flex-wrap gap-2 mt-4" id="profile-links" aria-label="个人链接"></div>
+            </div>
+            <div class="col-lg-4">
+              <aside class="profile-card" aria-label="个人信息摘要">
+                <div class="portrait-placeholder" aria-hidden="true"><span>GJ</span></div>
+                <dl class="mb-0" id="quick-facts"></dl>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="section-block" aria-labelledby="research-title">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">RESEARCH</p><h2 id="research-title">研究方向</h2></div>
+          <div class="row g-3" id="research-list"></div>
+        </div>
+      </section>
+
+      <section id="education" class="section-block section-muted" aria-labelledby="education-title">
+        <div class="container narrow-content">
+          <div class="section-heading"><p class="eyebrow">EDUCATION</p><h2 id="education-title">教育背景</h2></div>
+          <ol class="timeline" id="education-list"></ol>
+        </div>
+      </section>
+
+      <section id="publications" class="section-block" aria-labelledby="publications-title">
+        <div class="container">
+          <div class="section-heading d-md-flex justify-content-between align-items-end gap-4">
+            <div><p class="eyebrow">SELECTED WORK</p><h2 id="publications-title">学术成果</h2></div>
+            <div class="filter-group" id="publication-filters" role="group" aria-label="按类别筛选论文"></div>
+          </div>
+          <p class="filter-status visually-hidden" id="filter-status" aria-live="polite"></p>
+          <div class="publication-list" id="publication-list"></div>
+          <div class="mt-5 pt-2"><h3 class="subheading">研究项目</h3><div class="row g-3" id="project-list"></div></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-block contact-section" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="row g-4 align-items-end">
+            <div class="col-lg-6"><p class="eyebrow">CONTACT</p><h2 id="contact-title">联系方式</h2><p class="contact-intro">欢迎就学术交流、研究合作与相关议题联系。</p></div>
+            <div class="col-lg-6"><address class="contact-list" id="contact-list"></address></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <p class="mb-0">&copy; <span id="current-year"></span> <span data-field="person.name">郭景涛</span></p>
+        <p class="mb-0">本地访问次数 <span id="visit-count" aria-label="本地访问次数">--</span></p>
+      </div>
+    </footer>
+
+    <template id="loading-template"><p class="text-secondary">资料加载中...</p></template>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
